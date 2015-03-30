@@ -157,10 +157,12 @@ let g:neocomplcache_force_omni_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 " ----------------------------------------------------------------------------------------
 " lightline setting
 let g:lightline = {
-      \ 'colorscheme': 'wombat',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ], ['ctrlpmark'] ],
       \   'right': [ [ 'syntastic', 'lineinfo' ], ['percent'], [ 'fileformat', 'fileencoding', 'filetype' ] ]
+      \ },
+      \ 'component': {
+      \   'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"-"}'
       \ },
       \ 'component_function': {
       \   'fugitive': 'MyFugitive',
@@ -177,7 +179,8 @@ let g:lightline = {
       \ 'component_type': {
       \   'syntastic': 'error',
       \ },
-      \ 'subseparator': { 'left': '|', 'right': '|' }
+      \ 'separator': { 'left': '', 'right': '' },
+      \ 'subseparator': { 'left': '', 'right': '' }
       \ }
 
 function! MyModified()
