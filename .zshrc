@@ -70,7 +70,7 @@ if type boot2docker > /dev/null 2>&1; then
   export DOCKER_HOST=tcp://192.168.59.103:2376
   export DOCKER_CERT_PATH=~/.boot2docker/certs/boot2docker-vm
   export DOCKER_TLS_VERIFY=1
-  $(boot2docker shellinit)
+  # $(boot2docker shellinit) > /dev/null 2>&1
 fi
 
 # ##### ##### ##### ##### #####
