@@ -319,35 +319,24 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_python_checkers = ['pep8']
 
 " ----------------------------------------------------------------------------------------
-" vdebug setting
-let g:vdebug_options= {
-      \    "port" : 9000,
-      \    "server" : '192.168.33.1',
-      \    "timeout" : 20,
-      \    "on_close" : 'detach',
-      \    "break_on_open" : 1,
-      \    "ide_key" : 'macgdbp',
-      \    "remote_path" : "",
-      \    "local_path" : "",
-      \    "debug_window_level" : 0,
-      \    "debug_file_level" : 0,
-      \    "debug_file" : "",
-      \}
-
-" ----------------------------------------------------------------------------------------
 " tags setting
 " ctags --languages=php -f ~/php.tags `pwd`
 " au BufNewFile,BufRead *.php let g:vim_tags_project_tags_command = "ctags --languages=php -f ~/php.tags `pwd` 2>/dev/null &"
-nnoremap <C-]> g<C-]>
-nnoremap <C-w>] <C-w>g]
 au BufNewFile,BufRead *.php set tags+=$HOME/.vim/tags/php.tags
 
 " ----------------------------------------------------------------------------------------
 " commands
 let mapleader = " "
-nnoremap <Leader>uf :Unite file
-nnoremap <Leader>o :Unite -vertical -winwidth=40 -no-quit outline
-nnoremap <Leader>- gg=G
+" Tags
+nnoremap <C-]> g<C-]>
+nnoremap <C-w>] <C-w>g]
+" Unite
+nnoremap <silent> <Leader>uf :<C-u>Unite file<CR>
+nnoremap <silent> <Leader>o  :<C-u>Unite -vertical -winwidth=50 -no-quit outline<CR>
+" Formatter
+nnoremap <Leader>- gg=Gg;
+" Tab
+nnoremap <silent> <Leader>tn :<C-u>tabnew<CR>
 
 " ----------------------------------------------------------------------------------------
 " core
@@ -380,4 +369,4 @@ set directory=~/.vim/swap
 set backupdir=~/.vim/backup
 set undodir=~/.vim/undo
 set textwidth=250
-
+set autoread
