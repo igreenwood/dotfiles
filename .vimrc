@@ -35,6 +35,7 @@ NeoBundleCheck
 " neobundle-plugins
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'Shougo/unite-outline'
 NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'Shougo/vimproc.vim', {
@@ -332,6 +333,7 @@ nnoremap <C-]> g<C-]>
 nnoremap <C-w>] <C-w>g]
 " Unite
 nnoremap <silent> <Leader>uf :<C-u>Unite file<CR>
+nnoremap <silent> <Leader>um :<C-u>Unite file_mru<CR>
 nnoremap <silent> <Leader>o  :<C-u>Unite -vertical -winwidth=50 -no-quit outline<CR>
 " Formatter
 nnoremap <Leader>- gg=Gg;
