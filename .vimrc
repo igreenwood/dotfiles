@@ -49,6 +49,7 @@ NeoBundle 'Shougo/vimproc.vim', {
       \ }
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'Yggdroot/indentLine'
 NeoBundle 'szw/vim-tags'
