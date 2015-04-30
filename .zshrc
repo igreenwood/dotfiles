@@ -5,7 +5,8 @@ path=($JAVA_HOME/bin $path)
 
 # ##### ##### ##### ##### #####
 # Alias settings.
-alias vim='/Applications/MacVim.app/Contents/MacOS/mvim -v'
+# alias vim='/Applications/MacVim.app/Contents/MacOS/mvim -v'
+alias vim='/Applications/MacVim.app/Contents/MacOS/mvim'
 alias ls='ls -vFG'
 alias chrome="open -a /Applications/Google\ Chrome.app"
 if type rmtrash > /dev/null 2>&1; then
