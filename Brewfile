@@ -38,6 +38,7 @@ brew cask install slack
 # brew cask install hoster
 # brew cask install github
 # brew cask install forklift
+brew cask install zsh-completion
 
 ## AppStore
 # line
