@@ -37,6 +37,7 @@ setopt correct
 setopt list_packed
 setopt nolistbeep
 setopt noautoremoveslash
+setopt hist_verify
 
 typeset -U path cdpath fpath manpath # do not add the registered path
 
