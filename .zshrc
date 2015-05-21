@@ -44,7 +44,7 @@ typeset -U path cdpath fpath manpath # do not add the registered path
 # ##### ##### ##### ##### #####
 # Alias
 setopt complete_aliases
-alias vim='/Applications/MacVim.app/Contents/MacOS/mvim'
+alias vim='/Applications/MacVim.app/Contents/MacOS/mvim -v'
 alias ls='ls -vFG'
 alias l='ls -la'
 alias la="ls -a"
