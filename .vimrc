@@ -21,18 +21,6 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " My Bundles here:
 " Refer to |:NeoBundle-examples|.
 " Note: You don't set neobundle setting in .gvimrc!
-
-call neobundle#end()
-
-" Required:
-filetype plugin indent on
-
-" If there are uninstalled bundles found on startup,
-" this will conveniently prompt you to install them.
-NeoBundleCheck
-
-" ----------------------------------------------------------------------------------------
-" neobundle-plugins
 NeoBundle 'Shougo/neocomplete'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
@@ -67,6 +55,15 @@ NeoBundle 'tpope/vim-classpath'
 NeoBundle 'venantius/vim-eastwood'
 NeoBundle 'venantius/vim-cljfmt'
 NeoBundle 'dgryski/vim-godef'
+
+call neobundle#end()
+
+" Required:
+filetype plugin indent on
+
+" If there are uninstalled bundles found on startup,
+" this will conveniently prompt you to install them.
+NeoBundleCheck
 
 " ----------------------------------------------------------------------------------------
 " neocomplete setting
