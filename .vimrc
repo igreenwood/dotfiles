@@ -55,6 +55,7 @@ NeoBundle 'tpope/vim-classpath'
 NeoBundle 'venantius/vim-eastwood'
 NeoBundle 'venantius/vim-cljfmt'
 NeoBundle 'dgryski/vim-godef'
+NeoBundle 'hail2u/vim-css3-syntax'
 
 call neobundle#end()
 
