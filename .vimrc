@@ -57,6 +57,7 @@ NeoBundle 'venantius/vim-cljfmt'
 NeoBundle 'dgryski/vim-godef'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'nixprime/cpsm'
+NeoBundle 'hail2u/vim-css3-syntax'
 
 call neobundle#end()
 
