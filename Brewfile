@@ -10,7 +10,7 @@ upgrade
 
 brew tap phinze/homebrew-cask
 install brew-cask
-install bash zsh git tig tree wget curl tmux openssl
+install bash zsh git tig tree wget curl tmux openssl boost cmake
 
 ## Homebrew-cask
 brew cask install google-chrome

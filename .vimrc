@@ -55,6 +55,8 @@ NeoBundle 'tpope/vim-classpath'
 NeoBundle 'venantius/vim-eastwood'
 NeoBundle 'venantius/vim-cljfmt'
 NeoBundle 'dgryski/vim-godef'
+NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'nixprime/cpsm'
 
 call neobundle#end()
 
@@ -271,19 +273,24 @@ let g:syntastic_python_checkers = ['pep8']
 au BufNewFile,BufRead *.php set tags+=$HOME/.vim/tags/php.tags
 
 " ----------------------------------------------------------------------------------------
+" cpsm setting
+let g:ctrlp_match_func = {'match': 'cpsm#CtrlPMatch'}
+" let g:ctrlp_user_command = 'files -p %s'
+
+" ----------------------------------------------------------------------------------------
 " commands
 let mapleader = " "
 " Tags
 nnoremap <C-]> g<C-]>
 nnoremap <C-w>] <C-w>g]
 " Unite
-nnoremap <silent> <Leader>uf :<C-u>Unite file<CR>
-nnoremap <silent> <Leader>um :<C-u>Unite file_mru<CR>
+nnoremap <silent> <Leader>uf :<C-u>CtrlP<CR>
+nnoremap <silent> <Leader>um :<C-u>CtrlPMRUFiles<CR>
 nnoremap <silent> <Leader>o  :<C-u>Unite -vertical -winwidth=50 -no-quit outline<CR>
 " Formatter
-nnoremap <Leader>- gg=Gg;
+nnoremap <silent> <Leader>- gg=Gg;
 " Tab
-nnoremap <silent> <Leader>tn :<C-u>tabnew<CR>
+nnoremap <silent> <Leader>tn :tabnew<CR>
 
 " ----------------------------------------------------------------------------------------
 " core
