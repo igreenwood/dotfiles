@@ -122,3 +122,5 @@ ls_abbrev() {
     fi
 }
 
+eval `ssh-agent`
+ssh-add
