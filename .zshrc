@@ -118,3 +118,6 @@ if type boot2docker > /dev/null 2>&1; then
   # $(boot2docker shellinit) > /dev/null 2>&1
 fi
 
+
+eval `ssh-agent`
+ssh-add
