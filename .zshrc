@@ -42,6 +42,10 @@ setopt hist_verify
 typeset -U path cdpath fpath manpath # do not add the registered path
 
 # ##### ##### ##### ##### #####
+# PATH
+export PATH=$PATH:~/bin
+
+# ##### ##### ##### ##### #####
 # Alias
 setopt complete_aliases
 alias vim='/Applications/MacVim.app/Contents/MacOS/mvim'
@@ -67,6 +71,15 @@ path=($JAVA_HOME/bin $path)
 # Golang
 export GOPATH=$HOME/Develop/golang
 export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
+
+# ##### ##### ##### ##### #####
+# boot2docker
+if type boot2docker > /dev/null 2>&1; then
+  export DOCKER_HOST=tcp://192.168.59.103:2376
+  export DOCKER_CERT_PATH=~/.boot2docker/certs/boot2docker-vm
+  export DOCKER_TLS_VERIFY=1
+  # $(boot2docker shellinit) > /dev/null 2>&1
+fi
 
 # ##### ##### ##### ##### #####
 # Function
@@ -117,7 +130,6 @@ if type boot2docker > /dev/null 2>&1; then
   export DOCKER_TLS_VERIFY=1
   # $(boot2docker shellinit) > /dev/null 2>&1
 fi
-
 
 eval `ssh-agent`
 ssh-add
