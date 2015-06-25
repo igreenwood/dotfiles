@@ -133,3 +133,5 @@ fi
 
 eval `ssh-agent`
 ssh-add
+
+eval "$(docker-machine env dev)"
