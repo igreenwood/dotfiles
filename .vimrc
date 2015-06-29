@@ -295,6 +295,8 @@ nnoremap <silent> <Leader>o  :<C-u>Unite -vertical -winwidth=50 -no-quit outline
 nnoremap <silent> <Leader>- gg=Gg;
 " Tab
 nnoremap <silent> <Leader>tn :tabnew<CR>
+" Paste
+vnoremap <silent> p "0p<CR>
 
 " ----------------------------------------------------------------------------------------
 " core
