@@ -296,7 +296,7 @@ nnoremap <silent> <Leader>- gg=Gg;
 " Tab
 nnoremap <silent> <Leader>tn :tabnew<CR>
 " Paste
-vnoremap <silent> p "0p<CR>
+vnoremap <silent> <C-p> "0p<CR>
 
 " ----------------------------------------------------------------------------------------
 " core
