@@ -2,7 +2,7 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 autoload -U compinit
 compinit
 
-export LANG=ja_JP.UTF-8
+export LANG=en_US.UTF-8
 autoload -Uz vcs_info
 setopt prompt_subst
 zstyle ':vcs_info:git:*' check-for-changes true

@@ -25,7 +25,6 @@ NeoBundle 'Shougo/neocomplete'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle "honza/vim-snippets"
-NeoBundle "rcmdnk/vim-octopress-snippets"
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'Shougo/unite-outline'
@@ -47,6 +46,7 @@ NeoBundle 'Yggdroot/indentLine'
 NeoBundle 'szw/vim-tags'
 NeoBundle 'surround.vim'
 NeoBundle 'altercation/vim-colors-solarized'
+
 NeoBundle 'scrooloose/syntastic.git'
 NeoBundle 'guns/vim-slamhound'
 NeoBundle 'kien/rainbow_parentheses.vim'
@@ -54,6 +54,8 @@ NeoBundle 'tpope/vim-fireplace'
 NeoBundle 'tpope/vim-classpath'
 NeoBundle 'venantius/vim-eastwood'
 NeoBundle 'venantius/vim-cljfmt'
+NeoBundle 'guns/vim-clojure-static'
+
 NeoBundle 'dgryski/vim-godef'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'nixprime/cpsm'
@@ -328,5 +330,5 @@ set clipboard+=unnamed
 set directory=~/.vim/swap
 set backupdir=~/.vim/backup
 set undodir=~/.vim/undo
-set textwidth=250
+set textwidth=0
 set autoread
