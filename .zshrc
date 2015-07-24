@@ -31,6 +31,12 @@ bindkey "^[[B" history-beginning-search-forward-end
 zstyle ':completion:*:default' menu select # select by arrow key
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 
+zmodload zsh/complist
+bindkey -M menuselect 'h' vi-backward-char
+bindkey -M menuselect 'j' vi-down-line-or-history
+bindkey -M menuselect 'k' vi-up-line-or-history
+bindkey -M menuselect 'l' vi-forward-char
+
 setopt auto_cd
 setopt auto_pushd
 setopt correct
@@ -61,11 +67,6 @@ alias chrome="open -a /Applications/Google\ Chrome.app"
 if type rmtrash > /dev/null 2>&1; then
   alias rm='rmtrash'
 fi
-
-# ##### ##### ##### ##### #####
-# Java
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home
-path=($JAVA_HOME/bin $path)
 
 # ##### ##### ##### ##### #####
 # Golang
