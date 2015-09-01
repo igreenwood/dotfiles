@@ -6,3 +6,4 @@ set columns=150
 set lines=50
 set imdisable
 set visualbell t_vb=
+set ambiwidth=single
