@@ -74,15 +74,6 @@ export GOPATH=$HOME/Develop/golang
 export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 
 # ##### ##### ##### ##### #####
-# boot2docker
-if type boot2docker > /dev/null 2>&1; then
-  export DOCKER_HOST=tcp://192.168.59.103:2376
-  export DOCKER_CERT_PATH=~/.boot2docker/certs/boot2docker-vm
-  export DOCKER_TLS_VERIFY=1
-  # $(boot2docker shellinit) > /dev/null 2>&1
-fi
-
-# ##### ##### ##### ##### #####
 # Function
 chpwd() {
     ls_abbrev
@@ -125,17 +116,17 @@ ls_abbrev() {
 
 # ##### ##### ##### ##### #####
 # boot2docker
-if type boot2docker > /dev/null 2>&1; then
-  export DOCKER_HOST=tcp://192.168.59.103:2376
-  export DOCKER_CERT_PATH=~/.boot2docker/certs/boot2docker-vm
-  export DOCKER_TLS_VERIFY=1
-  # $(boot2docker shellinit) > /dev/null 2>&1
-fi
+# if type boot2docker > /dev/null 2>&1; then
+#   export DOCKER_HOST=tcp://192.168.59.103:2376
+#   export DOCKER_CERT_PATH=~/.boot2docker/certs/boot2docker-vm
+#   export DOCKER_TLS_VERIFY=1
+#   $(boot2docker shellinit) > /dev/null 2>&1
+# fi
 
 eval `ssh-agent`
 ssh-add
 
-eval "$(docker-machine env dev)"
+# eval "$(docker-machine env dev)"
 
 # aws cli
 source /usr/local/bin/aws_zsh_completer.sh
