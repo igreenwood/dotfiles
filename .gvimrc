@@ -1,7 +1,7 @@
 set background=dark
 colorscheme solarized
-set guifont=Ubuntu\ Mono\ derivative\ Powerline:h14
-set guifontwide=Ubuntu\ Mono\ derivative\ Powerline:h12
+set guifont=Menlo\ for\ Powerline:h12
+set guifontwide=Menlo\ for\ Powerline:h10
 set columns=150
 set lines=50
 set imdisable
