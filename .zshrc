@@ -136,3 +136,6 @@ eval `ssh-agent`
 ssh-add
 
 eval "$(docker-machine env dev)"
+
+# aws cli
+source /usr/local/bin/aws_zsh_completer.sh
