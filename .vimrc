@@ -22,13 +22,9 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " Refer to |:NeoBundle-examples|.
 " Note: You don't set neobundle setting in .gvimrc!
 NeoBundle 'Shougo/neocomplete'
-NeoBundle 'Shougo/neosnippet'
-NeoBundle 'Shougo/neosnippet-snippets'
-NeoBundle "honza/vim-snippets"
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'Shougo/unite-outline'
-NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'Shougo/vimproc.vim', {
       \ 'build' : {
       \     'windows' : 'tools\\update-dll-mingw',
@@ -43,23 +39,14 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'Yggdroot/indentLine'
-NeoBundle 'szw/vim-tags'
 NeoBundle 'surround.vim'
-NeoBundle 'altercation/vim-colors-solarized'
 
 NeoBundle 'scrooloose/syntastic.git'
-NeoBundle 'guns/vim-slamhound'
 NeoBundle 'kien/rainbow_parentheses.vim'
-NeoBundle 'tpope/vim-fireplace'
-NeoBundle 'tpope/vim-classpath'
-NeoBundle 'venantius/vim-eastwood'
-NeoBundle 'venantius/vim-cljfmt'
-NeoBundle 'guns/vim-clojure-static'
 
 NeoBundle 'dgryski/vim-godef'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'nixprime/cpsm'
-NeoBundle 'hail2u/vim-css3-syntax'
 
 call neobundle#end()
 
@@ -73,37 +60,6 @@ NeoBundleCheck
 " ----------------------------------------------------------------------------------------
 " neocomplete setting
 let g:neocomplete#enable_at_startup = 1
-
-" ----------------------------------------------------------------------------------------
-" neosnippet setting
-" Plugin key-mappings.
-imap <C-k> <Plug>(neosnippet_expand_or_jump)
-smap <C-k> <Plug>(neosnippet_expand_or_jump)
-xmap <C-k> <Plug>(neosnippet_expand_target)
-
-" SuperTab like snippets behavior.
-imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-      \ "\<Plug>(neosnippet_expand_or_jump)"
-      \: pumvisible() ? "\<C-n>" : "\<TAB>"
-smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-      \ "\<Plug>(neosnippet_expand_or_jump)"
-      \: "\<TAB>"
-
-" For snippet_complete marker.
-if has('conceal')
-  set conceallevel=2 concealcursor=niv
-endif
-
-let g:neosnippet#enable_snipmate_compatibility = 1
-" let g:neosnippet#disable_runtime_snippets = {'_' : 1}
-let g:neosnippet#snippets_directory = []
-" if ! empty(neobundle#get("vim-your-snippets"))
-"   let g:neosnippet#snippets_directory += ['~/.vim/bundle/vim-your-snippets/neosnippets')]
-" endif
-let g:neosnippet#snippets_directory += ['~/.vim/bundle/neosnippet-snippets/neosnippets']
-if ! empty(neobundle#get("vim-snippets"))
-  let g:neosnippet#snippets_directory += ['~/.vim/bundle/vim-snippets/snippets']
-endif
 
 " ----------------------------------------------------------------------------------------
 " lightline setting
@@ -270,9 +226,6 @@ let g:syntastic_python_checkers = ['pep8']
 
 " ----------------------------------------------------------------------------------------
 " tags setting
-" ctags --languages=php -f ~/php.tags `pwd`
-" au BufNewFile,BufRead *.php let g:vim_tags_project_tags_command = "ctags --languages=php -f ~/php.tags `pwd` 2>/dev/null &"
-au BufNewFile,BufRead *.php set tags+=$HOME/.vim/tags/php.tags
 
 " ----------------------------------------------------------------------------------------
 " cpsm setting
