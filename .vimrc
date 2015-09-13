@@ -22,6 +22,9 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " Refer to |:NeoBundle-examples|.
 " Note: You don't set neobundle setting in .gvimrc!
 NeoBundle 'Shougo/neocomplete'
+NeoBundle 'Shougo/neosnippet'
+NeoBundle 'Shougo/neosnippet-snippets'
+NeoBundle "honza/vim-snippets"
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'Shougo/unite-outline'
@@ -60,6 +63,37 @@ NeoBundleCheck
 " ----------------------------------------------------------------------------------------
 " neocomplete setting
 let g:neocomplete#enable_at_startup = 1
+
+" ----------------------------------------------------------------------------------------
+" neosnippet setting
+" Plugin key-mappings.
+imap <C-k> <Plug>(neosnippet_expand_or_jump)
+smap <C-k> <Plug>(neosnippet_expand_or_jump)
+xmap <C-k> <Plug>(neosnippet_expand_target)
+
+" SuperTab like snippets behavior.
+imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+      \ "\<Plug>(neosnippet_expand_or_jump)"
+      \: pumvisible() ? "\<C-n>" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+      \ "\<Plug>(neosnippet_expand_or_jump)"
+      \: "\<TAB>"
+
+" For snippet_complete marker.
+if has('conceal')
+  set conceallevel=2 concealcursor=niv
+endif
+
+let g:neosnippet#enable_snipmate_compatibility = 1
+" let g:neosnippet#disable_runtime_snippets = {'_' : 1}
+let g:neosnippet#snippets_directory = []
+" if ! empty(neobundle#get("vim-your-snippets"))
+"   let g:neosnippet#snippets_directory += ['~/.vim/bundle/vim-your-snippets/neosnippets')]
+" endif
+let g:neosnippet#snippets_directory += ['~/.vim/bundle/neosnippet-snippets/neosnippets']
+if ! empty(neobundle#get("vim-snippets"))
+  let g:neosnippet#snippets_directory += ['~/.vim/bundle/vim-snippets/snippets']
+endif
 
 " ----------------------------------------------------------------------------------------
 " lightline setting
