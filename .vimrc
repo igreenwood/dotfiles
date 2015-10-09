@@ -318,3 +318,6 @@ set backupdir=~/.vim/backup
 set undodir=~/.vim/undo
 set textwidth=0
 set autoread
+
+nnoremap ; :
+nnoremap : ;
