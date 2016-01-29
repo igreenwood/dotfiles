@@ -1,0 +1,16 @@
+{{ partial "default_head.html" . }}
+
+<div class="index list">
+  <div class="container">
+
+    <header>
+      <h1>{{ .Title }} in {{ .Data.Singular }}</h1>
+    </header>
+
+    {{ range .Data.Pages }}
+    {{ .Render "li" }}
+    {{ end }}
+  </div>
+</div>
+
+{{ partial "default_foot.html" . }}

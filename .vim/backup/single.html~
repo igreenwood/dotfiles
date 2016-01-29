@@ -1,0 +1,50 @@
+{{ partial "default_head.html" . }}
+
+<div class="single">
+  <div class="container">
+    <article itemscope="itemscope" itemtype="http://schema.org/Article"{{ if .Draft }} class="draft"{{ end }}>
+      <meta itemprop="mainEntityOfPage"  itemType="https://schema.org/WebPage" content="{{ .Site.BaseURL }}"/>
+      <meta itemprop="dateModified" content="{{ .Date.Format "2006-01-02T15:04:05-07:00" }}">
+      <meta itemprop="headline" content="{{ .Title }}">
+      <meta itemprop="description" content="{{ .Summary }}">
+      <meta itemprop="url" content="{{ .Permalink }}">
+      <div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+        <meta itemprop="url" content="{{ with .Params.image }}{{ $.Site.BaseURL }}/images/{{ . }}{{ else }}{{ .Site.BaseURL }}/images/logo.png{{ end }}" />
+        <meta itemprop="width" content="800">
+        <meta itemprop="height" content="800">
+      </div>
+      <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+        <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+          <meta itemprop="url" content="{{ .Site.BaseURL }}/images/logo.jpg">
+          <meta itemprop="width" content="100">
+          <meta itemprop="height" content="100">
+        </div>
+        <meta itemprop="name" content="{{ .Site.Title }}">
+      </div>
+      <div itemprop="author" itemscope itemtype="https://schema.org/Person">
+        <meta itemprop="name" content="{{ .Site.Params.Author }}">
+      </div>
+
+      <header>
+        <h1 class="title">{{ .Title }}</h1>
+        <time itemprop="datePublished" pubdate="pubdate" datetime="{{ .Date.Format "2006-01-02T15:04:05-07:00" }}">{{ .Date.Format .Site.Params.DateForm }}</time>
+        <a href="/{{ .Section }}/" class="section">{{ .Section }}</a>
+        {{ with .Params.image }}<div class="image"><img src="/images/{{ . }}" alt="artcile-image"></div>{{ end }}
+      </header>
+
+      <div class="body" itemprop="articleBody">{{ .Content }}</div>
+
+      <aside>
+        <div class="tags">
+          {{ range .Params.tags }}
+          <span class="tag"><a href="{{ $.Site.BaseURL }}/tags/{{ . }}">{{ . }}</a></span>
+          {{ end }}
+        </div>
+      </aside>
+
+    </article>
+  </div>
+</div>
+
+{{ partial "default_foot.html" . }}
+

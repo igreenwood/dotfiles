@@ -1,0 +1,11 @@
+{{ partial "default_head.html" . }}
+
+<div class="index">
+  <div class="container">
+    {{ range where .Site.Pages }}
+    {{ .Render "li" }}
+    {{ end }}
+  </div>
+</div>
+
+{{ partial "default_foot.html" . }}

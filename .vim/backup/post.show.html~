@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+
+{% block title %}{{ post.title }} | {% endblock %}
+
+{% block content %}
+<div class="container post-show">
+
+  <div class="row">
+
+    <div class="col-sm-2">
+    </div>
+
+    <div class="col-sm-8">
+      <header class="article-header">
+        {% if post.tags %}
+        <div class="article-tags">
+          {% for tag in post.tags.split(',') %}
+          <a href="/tags/{{ tag }}" class="tag">{{ tag }}</a>
+          {% endfor %}
+        </div>
+        {% endif %}
+        <h1 class="title">{{ post.title }}</h1>
+      </header>
+
+      <div class="article-image">
+        <img src="/static/images/uploads/{{ post.id }}.gif">
+      </div>
+
+      <div class="article-url">
+        <a href="{{ post.url }}" target="_blank">{{ post.url }}</a>
+      </div>
+
+      <aside class="share article-share">
+        <a href="#" class="btn btn-like" data-id="{{ post.id }}"><i class="fa fa-heart"></i></a>
+        <a href="http://www.facebook.com/sharer.php?src=bm&u={{ post.id }}&t={{ post.title }}" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;" class="btn btn-facebook"><i class="fa fa-facebook"></i></a>
+        <a href="http://twitter.com/intent/tweet?url={{ post.id }}&text={{ post.title }}&tw_p=tweetbutton" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;" class="btn btn-twitter"><i class="fa fa-twitter"></i></a>
+      </aside>
+
+      <footer class="article-footer">
+        <nav>
+          <div class="row">
+            <div class="col-xs-6">{% if prev_post %}<a href="/post/{{ prev_post.id }}" class="prev">{{ prev_post.title or "NO TITLE" }}</a>{% endif %}</div>
+            <div class="col-xs-6">{% if next_post %}<a href="/post/{{ next_post.id }}" class="next">{{ next_post.title or "NO TITLE" }}</i></a>{% endif %}</div>
+          </div>
+        </nav>
+      </footer>
+
+      <aside class="article-aside">
+        {% if related_posts %}
+        <div class="section">
+          <header>こちらの<span class="font-logo">gif</span>もおすすめ</header>
+
+          <div class="row">
+
+            {% for el in related_posts %}
+            <div class="col-sm-3">
+              <div class="post">
+                <a href="/post/{{ el.id }}">
+                  <div class="image-wrapper"><div class="image" style="background-image: url(/static/images/uploads/{{ el.id }}.gif);"></div></div>
+                  <h3 class="title">{{ el.title or 'NO TITLE' }}</h3>
+                </a>
+                <aside>
+                  <a href="#" class="btn btn-like btn-xs{% if el.is_liked() %} liked{% endif %}" data-id="{{ el.id }}"><i class="fa fa-heart"></i> {{ el.likes }}</a>
+                </aside>
+              </div>
+            </div>
+            {% endfor %}
+
+          </div>
+        </div>
+        {% endif %}
+
+        <div class="section">
+          <div id="disqus_thread"></div>
+          <script>
+(function() { // DON'T EDIT BELOW THIS LINE
+  var d = document, s = d.createElement('script');
+
+  s.src = '//giflib.disqus.com/embed.js';
+
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s);
+})();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+      </aside>
+        </div>
+
+        <div class="col-sm-2">
+        </div>
+
+    </div>
+  </div>
+</div>
+{% endblock %}

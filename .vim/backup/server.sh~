@@ -1,0 +1,3 @@
+#!/bin/bash
+
+hugo server --watch -t $1 --buildDraft=true --buildFuture=true
