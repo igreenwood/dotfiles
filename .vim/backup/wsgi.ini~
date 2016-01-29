@@ -1,3 +1,0 @@
-[uwsgi]
-socket = /srv/www/giflib/giflib.sock
-
