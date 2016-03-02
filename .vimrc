@@ -1,64 +1,34 @@
 " ----------------------------------------------------------------------------------------
-"Note: Skip initialization for vim-tiny or vim-small.
-if !1 | finish | endif
+let s:dein_dir = expand('~/.vim/dein/cache')
+let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
 
-if has('vim_starting')
-  if &compatible
-    set nocompatible               " Be iMproved
+if &runtimepath !~# '/dein.vim'
+  if !isdirectory(s:dein_repo_dir)
+    execute '!git clone https://github.com/Shougo/dein.vim' s:dein_repo_dir
   endif
-
-  " Required:
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
+  execute 'set runtimepath^=' . fnamemodify(s:dein_repo_dir, ':p')
 endif
 
-" Required:
-call neobundle#begin(expand('~/.vim/bundle/'))
+call dein#begin(s:dein_dir)
 
-" Let NeoBundle manage NeoBundle
-" Required:
-NeoBundleFetch 'Shougo/neobundle.vim'
+let s:toml      = '~/.vim/dein/dein.toml'
+let s:lazy_toml = '~/.vim/dein/dein_lazy.toml'
 
-" My Bundles here:
-" Refer to |:NeoBundle-examples|.
-" Note: You don't set neobundle setting in .gvimrc!
-NeoBundle 'Shougo/neocomplete'
-NeoBundle 'Shougo/neosnippet'
-NeoBundle 'Shougo/neosnippet-snippets'
-NeoBundle "honza/vim-snippets"
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/neomru.vim'
-NeoBundle 'Shougo/unite-outline'
-NeoBundle 'Shougo/vimproc.vim', {
-      \ 'build' : {
-      \     'windows' : 'tools\\update-dll-mingw',
-      \     'cygwin' : 'make -f make_cygwin.mak',
-      \     'mac' : 'make -f make_mac.mak',
-      \     'linux' : 'make',
-      \     'unix' : 'gmake',
-      \    },
-      \ }
-NeoBundle 'itchyny/lightline.vim'
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'airblade/vim-gitgutter'
-NeoBundle 'altercation/vim-colors-solarized'
-NeoBundle 'Yggdroot/indentLine'
-NeoBundle 'surround.vim'
+if dein#load_cache([expand('<sfile>'), s:toml, s:lazy_toml])
+  call dein#load_toml(s:toml,      {'lazy': 0})
+  call dein#load_toml(s:lazy_toml, {'lazy': 1})
+  call dein#save_cache()
+endif
 
-NeoBundle 'scrooloose/syntastic.git'
-NeoBundle 'kien/rainbow_parentheses.vim'
+call dein#end()
 
-NeoBundle 'dgryski/vim-godef'
-NeoBundle 'kien/ctrlp.vim'
-NeoBundle 'nixprime/cpsm'
+if dein#check_install()
+  call dein#install()
+endif
 
-call neobundle#end()
-
+" ----------------------------------------------------------------------------------------
 " Required:
 filetype plugin indent on
-
-" If there are uninstalled bundles found on startup,
-" this will conveniently prompt you to install them.
-NeoBundleCheck
 
 " ----------------------------------------------------------------------------------------
 " neocomplete setting
@@ -91,9 +61,9 @@ let g:neosnippet#snippets_directory = []
 "   let g:neosnippet#snippets_directory += ['~/.vim/bundle/vim-your-snippets/neosnippets')]
 " endif
 let g:neosnippet#snippets_directory += ['~/.vim/bundle/neosnippet-snippets/neosnippets']
-if ! empty(neobundle#get("vim-snippets"))
-  let g:neosnippet#snippets_directory += ['~/.vim/bundle/vim-snippets/snippets']
-endif
+"# if ! empty(neobundle#get("vim-snippets"))
+"#   let g:neosnippet#snippets_directory += ['~/.vim/bundle/vim-snippets/snippets']
+"# endif
 
 " ----------------------------------------------------------------------------------------
 " lightline setting
