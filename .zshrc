@@ -1,6 +1,6 @@
 fpath=(/usr/local/share/zsh-completions $fpath)
 autoload -U compinit
-compinit
+compinit -u
 
 export LANG=en_US.UTF-8
 autoload -Uz vcs_info
