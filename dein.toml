@@ -39,6 +39,10 @@ repo = 'kien/ctrlp.vim'
 
 [[plugins]]
 repo = 'nixprime/cpsm'
+  [plugins.build]
+  mac     = './install.sh'
+  linux   = './install.sh'
+  unix    = './install.sh'
 
 [[plugins]]
 repo = 'Shougo/vimproc.vim'
