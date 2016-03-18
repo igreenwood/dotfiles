@@ -35,6 +35,9 @@ repo = 'kien/rainbow_parentheses.vim'
 repo = 'vim-jp/vim-go-extra'
 
 [[plugins]]
+repo = 'fatih/vim-go'
+
+[[plugins]]
 repo = 'kien/ctrlp.vim'
 
 [[plugins]]
