@@ -32,7 +32,7 @@ repo = 'scrooloose/syntastic.git'
 repo = 'kien/rainbow_parentheses.vim'
 
 [[plugins]]
-repo = 'dgryski/vim-godef'
+repo = 'vim-jp/vim-go-extra'
 
 [[plugins]]
 repo = 'kien/ctrlp.vim'

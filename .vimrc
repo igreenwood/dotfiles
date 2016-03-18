@@ -207,13 +207,10 @@ au Syntax * RainbowParenthesesLoadBraces
 
 " ----------------------------------------------------------------------------------------
 " golang setting
-filetype plugin indent off
-set runtimepath+=$GOROOT/misc/vim
-filetype plugin indent on
-autocmd FileType go autocmd BufWritePre <buffer> Fmt
+set rtp+=$GOPATH/src/github.com/golang/lint/misc/vim
 autocmd FileType go setlocal sw=4 ts=4 sts=4 noet
-exe "set rtp+=".globpath($GOPATH, "src/github.com/nsf/gocode/vim")
-set completeopt=menu,preview
+autocmd FileType go autocmd BufWritePre <buffer> Fmt
+autocmd BufWritePost,FileWritePost *.go execute 'Lint' | cwindow
 
 " ----------------------------------------------------------------------------------------
 " syntastic setting
@@ -227,6 +224,9 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 let g:syntastic_python_checkers = ['pep8']
+
+let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': ['go'] }
+let g:syntastic_go_checkers = ['go', 'golint']
 
 " ----------------------------------------------------------------------------------------
 " tags setting
