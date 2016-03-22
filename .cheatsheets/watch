@@ -1,2 +1,0 @@
-# Watch nginx process count.
-watch --interval=1 "ps auxw | grep nginx | wc -l"
