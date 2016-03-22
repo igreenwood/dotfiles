@@ -2,3 +2,4 @@
 .vim/undo/*
 .vim/dein
 .vim/swap/*
+!.gitkeep
