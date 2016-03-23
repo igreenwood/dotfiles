@@ -1,5 +1,5 @@
 .vim/backup/*
 .vim/undo/*
-.vim/dein
+.vim/dein/cache
 .vim/swap/*
 !.gitkeep
