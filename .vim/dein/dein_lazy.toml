@@ -19,3 +19,4 @@ on_i = 1
 
 [[plugins]]
 repo = "othree/html5.vim"
+

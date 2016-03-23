@@ -58,3 +58,6 @@ repo = 'Shougo/vimproc.vim'
 
 [[plugins]]
 repo = 'thinca/vim-zenspace'
+
+[[plugins]]
+repo = "lilydjwg/colorizer"

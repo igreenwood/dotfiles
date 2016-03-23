@@ -13,15 +13,16 @@ if dein#load_state(s:dein_dir)
 
   let s:toml      = '~/.vim/dein/dein.toml'
   let s:lazy_toml = '~/.vim/dein/dein_lazy.toml'
-  
+
   call dein#begin(s:dein_dir, [expand('<sfile>'), s:toml, s:lazy_toml])
-  
+
   call dein#load_toml(s:toml,      {'lazy': 0})
   call dein#load_toml(s:lazy_toml, {'lazy': 1})
-  
+
   call dein#end()
+
   call dein#save_state()
-  
+
   if dein#check_install()
     call dein#install()
   endif
@@ -205,7 +206,7 @@ let g:vimshell_force_overwrite_statusline = 0
 au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
+" au Syntax * RainbowParenthesesLoadBraces # This setting is broken CSS color.
 
 " ----------------------------------------------------------------------------------------
 " golang setting
