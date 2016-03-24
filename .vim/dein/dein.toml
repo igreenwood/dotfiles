@@ -61,3 +61,7 @@ repo = 'thinca/vim-zenspace'
 
 [[plugins]]
 repo = "lilydjwg/colorizer"
+
+[[plugins]]
+repo = "othree/html5.vim"
+
