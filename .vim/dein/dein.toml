@@ -20,6 +20,9 @@ repo = 'airblade/vim-gitgutter'
 repo = 'altercation/vim-colors-solarized'
 
 [[plugins]]
+repo = 'cocopon/iceberg.vim'
+
+[[plugins]]
 repo = 'Yggdroot/indentLine'
 
 [[plugins]]

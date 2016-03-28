@@ -261,7 +261,8 @@ vnoremap <silent> <C-p> "0p<CR>
 
 " ----------------------------------------------------------------------------------------
 " core
-colorscheme solarized
+" colorscheme solarized
+colorscheme iceberg
 set nu
 set list
 set listchars=tab:»-,trail:-,eol:$,extends:»,precedes:«,nbsp:%
