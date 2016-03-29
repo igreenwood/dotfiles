@@ -23,6 +23,9 @@ repo = 'altercation/vim-colors-solarized'
 repo = 'cocopon/iceberg.vim'
 
 [[plugins]]
+repo = 'jaapie/vim-colours-dusk'
+
+[[plugins]]
 repo = 'Yggdroot/indentLine'
 
 [[plugins]]

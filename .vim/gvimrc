@@ -1,6 +1,5 @@
 set background=dark
-"colorscheme solarized
-colorscheme iceberg
+colorscheme dusk
 set guifont=Menlo\ for\ Powerline:h11
 set guifontwide=Menlo\ for\ Powerline:h11
 set columns=150
