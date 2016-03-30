@@ -240,6 +240,11 @@ let g:ctrlp_match_func = {'match': 'cpsm#CtrlPMatch'}
 " let g:ctrlp_user_command = 'files -p %s'
 
 " ----------------------------------------------------------------------------------------
+" filetype settings
+" json
+let g:vim_json_syntax_conceal = 0
+
+" ----------------------------------------------------------------------------------------
 " commands
 let mapleader = " "
 " Tags
