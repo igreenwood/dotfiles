@@ -3,9 +3,6 @@ repo = 'Shougo/neocomplete.vim'
 on_i = 1
 
 [[plugins]]
-repo = 'Shougo/unite-outline'
-
-[[plugins]]
 repo = 'Shougo/neosnippet-snippets'
 
 [[plugins]]

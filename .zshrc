@@ -122,7 +122,7 @@ export DOCKER_CERT_PATH="/Users/tsuji/.docker/machine/machines/default"
 export DOCKER_MACHINE_NAME="default"
 
 eval `ssh-agent`
-ssh-add
+ssh-add ~/.ssh/id_rsa
 
 # eval "$(docker-machine env dev)"
 
