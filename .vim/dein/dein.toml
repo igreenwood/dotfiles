@@ -60,19 +60,11 @@ repo = 'kien/ctrlp.vim'
 
 [[plugins]]
 repo = 'nixprime/cpsm'
-  [plugins.build]
-  mac     = './install.sh'
-  linux   = './install.sh'
-  unix    = './install.sh'
+build = './install.sh'
 
 [[plugins]]
 repo = 'Shougo/vimproc.vim'
-  [plugins.build]
-  windows = 'tools\\update-dll-mingw'
-  cygwin  = 'make -f make_cygwin.mak'
-  mac     = 'make -f make_mac.mak'
-  linux   = 'make'
-  unix    = 'gmake'
+build = 'make'
 
 [[plugins]]
 repo = 'thinca/vim-zenspace'
