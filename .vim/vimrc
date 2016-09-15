@@ -247,6 +247,12 @@ let g:indent_guides_guide_size = 1
 let g:indent_guides_exclude_filetypes = ['help', 'nerdtree', 'tagbar', 'unite']
 
 " ----------------------------------------------------------------------------------------
+" markdown settings
+hi link htmlItalic LineNr
+hi link htmlBold WarningMsg
+hi link htmlBoldItalic ErrorMsg
+
+" ----------------------------------------------------------------------------------------
 " commands
 let mapleader = " "
 " Tags
