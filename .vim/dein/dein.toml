@@ -32,7 +32,7 @@ repo = 'cocopon/iceberg.vim'
 repo = 'jaapie/vim-colours-dusk'
 
 [[plugins]]
-repo = 'Yggdroot/indentLine'
+repo = 'nathanaelkane/vim-indent-guides'
 
 [[plugins]]
 repo = 'tpope/vim-surround'
