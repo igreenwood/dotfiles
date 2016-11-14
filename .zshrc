@@ -70,7 +70,7 @@ fi
 
 # ##### ##### ##### ##### #####
 # Golang
-export GOPATH=$HOME/Develop/golang
+export GOPATH=$HOME/Develop/repositories
 export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 
 # ##### ##### ##### ##### #####
