@@ -114,13 +114,6 @@ ls_abbrev() {
   fi
 }
 
-# ##### ##### ##### ##### #####
-# docker
-export DOCKER_TLS_VERIFY="1"
-export DOCKER_HOST="tcp://192.168.99.100:2376"
-export DOCKER_CERT_PATH="/Users/tsuji/.docker/machine/machines/default"
-export DOCKER_MACHINE_NAME="default"
-
 eval `ssh-agent`
 ssh-add ~/.ssh/id_rsa
 
@@ -128,6 +121,10 @@ ssh-add ~/.ssh/id_rsa
 
 # aws cli
 source /usr/local/bin/aws_zsh_completer.sh
+
+# rbenv
+export PATH=$PATH:$HOME/.rbenv/bin
+eval "$(rbenv init -)"
 
 # ##### ##### ##### ##### #####
 # peco
