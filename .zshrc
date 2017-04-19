@@ -2,6 +2,7 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 autoload -U compinit
 compinit -u
 
+export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 autoload -Uz vcs_info
 setopt prompt_subst

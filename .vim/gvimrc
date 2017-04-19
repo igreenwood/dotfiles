@@ -1,5 +1,5 @@
 set background=dark
-colorscheme dusk
+colorscheme monokai
 set guifont=Menlo\ for\ Powerline:h11
 "set guifontwide=Menlo\ for\ Powerline:h11
 set columns=150

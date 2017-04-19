@@ -23,10 +23,7 @@ repo = 'tpope/vim-fugitive'
 repo = 'airblade/vim-gitgutter'
 
 [[plugins]]
-repo = 'altercation/vim-colors-solarized'
-
-[[plugins]]
-repo = 'cocopon/iceberg.vim'
+repo = 'crusoexia/vim-monokai'
 
 [[plugins]]
 repo = 'jaapie/vim-colours-dusk'
@@ -84,3 +81,5 @@ on_ft = 'json'
 [[plugins]]
 repo = 'Shougo/unite-outline'
 
+[[plugins]]
+repo = 'kchmck/vim-coffee-script'

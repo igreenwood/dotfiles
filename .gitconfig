@@ -3,3 +3,5 @@
 [user]
 	name = Daisuke Tsuji
 	email = dim0627@gmail.com
+[core]
+	editor = vim
