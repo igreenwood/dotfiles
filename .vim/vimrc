@@ -66,25 +66,25 @@ let g:neosnippet#snippets_directory += ['~/.vim/bundle/neosnippet-snippets/neosn
 " ----------------------------------------------------------------------------------------
 " lightline setting
 let g:lightline = {
-  \ 'active': {
-  \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ], ['ctrlpmark'] ],
-  \   'right': [ ['ale'], ['percent'], [ 'fileformat', 'fileencoding', 'filetype' ] ]
-  \ },
-  \ 'component_function': {
-  \   'fugitive': 'LightLineFugitive',
-  \   'filename': 'LightLineFilename',
-  \   'fileformat': 'LightLineFileformat',
-  \   'filetype': 'LightLineFiletype',
-  \   'fileencoding': 'LightLineFileEncoding',
-  \   'mode': 'LightLineMode',
-  \   'ctrlpmark': 'CtrlPMark',
-  \   'modified': 'LightLineModified',
-  \   'readonly': 'LightLineReadOnly',
-  \   'ale': 'ALEGetStatusLine',
-  \ },
-  \ 'separator': { 'left': '', 'right': '' },
-  \ 'subseparator': { 'left': '', 'right': '' }
-\  }
+\'active': {
+\  'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ], ['ctrlpmark'] ],
+\  'right': [ ['ale'], ['percent'], [ 'fileformat', 'fileencoding', 'filetype' ] ]
+\},
+\'component_function': {
+\  'fugitive': 'LightLineFugitive',
+\  'filename': 'LightLineFilename',
+\  'fileformat': 'LightLineFileformat',
+\  'filetype': 'LightLineFiletype',
+\  'fileencoding': 'LightLineFileEncoding',
+\  'mode': 'LightLineMode',
+\  'ctrlpmark': 'CtrlPMark',
+\  'modified': 'LightLineModified',
+\  'readonly': 'LightLineReadOnly',
+\  'ale': 'ALEGetStatusLine',
+\},
+\'separator': { 'left': '', 'right': '' },
+\'subseparator': { 'left': '', 'right': '' }
+\}
 
 function! LightLineModified()
   return &ft =~ 'help' ? '' : &modified ? '+' : &modifiable ? '' : '-'
@@ -199,6 +199,10 @@ autocmd BufWritePost,FileWritePost *.go execute 'Lint' | cwindow
 " ----------------------------------------------------------------------------------------
 " ale setting
 let g:ale_open_list = 1
+let g:ale_linters = {
+\'erb': [],
+\'eruby': [],
+\}
 
 " ----------------------------------------------------------------------------------------
 " tags setting
