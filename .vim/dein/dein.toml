@@ -79,6 +79,10 @@ repo = 'elzr/vim-json'
 on_ft = 'json'
 
 [[plugins]]
+repo = 'kchmck/vim-coffee-script'
+on_ft = 'coffee'
+
+[[plugins]]
 repo = 'Shougo/unite-outline'
 
 [[plugins]]
