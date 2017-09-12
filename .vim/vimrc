@@ -66,30 +66,25 @@ let g:neosnippet#snippets_directory += ['~/.vim/bundle/neosnippet-snippets/neosn
 " ----------------------------------------------------------------------------------------
 " lightline setting
 let g:lightline = {
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ], ['ctrlpmark'] ],
-      \   'right': [ [ 'syntastic', 'lineinfo' ], ['percent'], [ 'fileformat', 'fileencoding', 'filetype' ] ]
-      \ },
-      \ 'component_function': {
-      \   'fugitive': 'LightLineFugitive',
-      \   'filename': 'LightLineFilename',
-      \   'fileformat': 'LightLineFileformat',
-      \   'filetype': 'LightLineFiletype',
-      \   'fileencoding': 'LightLineFileEncoding',
-      \   'mode': 'LightLineMode',
-      \   'ctrlpmark': 'CtrlPMark',
-      \   'modified': 'LightLineModified',
-      \   'readonly': 'LightLineReadOnly',
-      \ },
-      \ 'component_expand': {
-      \   'syntastic': 'SyntasticStatuslineFlag',
-      \ },
-      \ 'component_type': {
-      \   'syntastic': 'error',
-      \ },
-      \ 'separator': { 'left': '', 'right': '' },
-      \ 'subseparator': { 'left': '', 'right': '' }
-      \ }
+  \ 'active': {
+  \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ], ['ctrlpmark'] ],
+  \   'right': [ ['ale'], ['percent'], [ 'fileformat', 'fileencoding', 'filetype' ] ]
+  \ },
+  \ 'component_function': {
+  \   'fugitive': 'LightLineFugitive',
+  \   'filename': 'LightLineFilename',
+  \   'fileformat': 'LightLineFileformat',
+  \   'filetype': 'LightLineFiletype',
+  \   'fileencoding': 'LightLineFileEncoding',
+  \   'mode': 'LightLineMode',
+  \   'ctrlpmark': 'CtrlPMark',
+  \   'modified': 'LightLineModified',
+  \   'readonly': 'LightLineReadOnly',
+  \   'ale': 'ALEGetStatusLine',
+  \ },
+  \ 'separator': { 'left': '', 'right': '' },
+  \ 'subseparator': { 'left': '', 'right': '' }
+\  }
 
 function! LightLineModified()
   return &ft =~ 'help' ? '' : &modified ? '+' : &modifiable ? '' : '-'
@@ -183,15 +178,6 @@ function! TagbarStatusFunc(current, sort, fname, ...) abort
   return lightline#statusline(0)
 endfunction
 
-augroup AutoSyntastic
-  autocmd!
-  autocmd BufWritePost *.c,*.cpp call s:syntastic()
-augroup END
-function! s:syntastic()
-  SyntasticCheck
-  call lightline#update()
-endfunction
-
 let g:unite_force_overwrite_statusline = 0
 let g:vimfiler_force_overwrite_statusline = 0
 let g:vimshell_force_overwrite_statusline = 0
@@ -211,21 +197,8 @@ autocmd FileType go autocmd BufWritePre <buffer> Fmt
 autocmd BufWritePost,FileWritePost *.go execute 'Lint' | cwindow
 
 " ----------------------------------------------------------------------------------------
-" syntastic setting
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
- let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
-let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': ['go', 'scss', 'ruby'] }
-let g:syntastic_go_checkers = ['go', 'golint']
-let g:syntastic_scss_checkers = ['scss_lint']
-let g:syntastic_ruby_checkers = ['rubocop']
-" let g:syntastic_python_checkers = ['pep8']
+" ale setting
+let g:ale_open_list = 1
 
 " ----------------------------------------------------------------------------------------
 " tags setting

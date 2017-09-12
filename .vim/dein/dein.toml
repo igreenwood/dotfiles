@@ -35,7 +35,7 @@ repo = 'nathanaelkane/vim-indent-guides'
 repo = 'tpope/vim-surround'
 
 [[plugins]]
-repo = 'scrooloose/syntastic.git'
+repo = 'w0rp/ale'
 
 [[plugins]]
 repo = 'kien/rainbow_parentheses.vim'
