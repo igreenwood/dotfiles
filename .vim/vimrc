@@ -203,6 +203,11 @@ let g:ale_linters = {
 \'erb': [],
 \'eruby': [],
 \}
+" Write this in your vimrc file
+let g:ale_lint_on_text_changed = 'never'
+" You can disable this option too
+" if you don't want linters to run on opening a file
+let g:ale_lint_on_enter = 0
 
 " ----------------------------------------------------------------------------------------
 " tags setting
@@ -253,6 +258,8 @@ vnoremap <silent> <C-p> "0p<CR>
 " Ingnore f1 help
 map <F1> <Esc>
 imap <F1> <Esc>
+"
+autocmd QuickFixCmdPost *grep* cwindow
 
 " ----------------------------------------------------------------------------------------
 " core
