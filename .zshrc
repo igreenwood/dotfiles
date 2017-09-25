@@ -55,7 +55,7 @@ export PATH=$PATH:~/bin
 # ##### ##### ##### ##### #####
 # Alias
 setopt complete_aliases
-alias vim='/Applications/MacVim.app/Contents/MacOS/mvim'
+alias vim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim -g "$@"'
 alias ls='ls -vFG'
 alias l='ls -la'
 alias la="ls -a"
