@@ -210,7 +210,12 @@ let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_enter = 0
 
 " ----------------------------------------------------------------------------------------
-" tags setting
+" denite setting
+call denite#custom#source('file_rec', 'matchers', ['matcher_ignore_globs'])
+call denite#custom#filter('matcher_ignore_globs', 'ignore_globs',
+\ [ '.git/', '.ropeproject/', '__pycache__/',
+\   'venv/', 'images/', '*.min.*', 'img/', 'fonts/',
+\   'node_modules/', '.sass-cache/'])
 
 " ----------------------------------------------------------------------------------------
 " cpsm setting
