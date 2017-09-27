@@ -216,6 +216,7 @@ let g:ale_lint_on_enter = 0
 " cpsm setting
 let g:ctrlp_match_func = {'match': 'cpsm#CtrlPMatch'}
 " let g:ctrlp_user_command = 'files -p %s'
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 
 " ----------------------------------------------------------------------------------------
 " filetype settings

@@ -55,12 +55,12 @@ on_ft = 'go'
 repo = 'cespare/vim-toml'
 on_ft = 'toml'
 
-# [[plugins]]
-# repo = 'kien/ctrlp.vim'
+[[plugins]]
+repo = 'kien/ctrlp.vim'
 
-# [[plugins]]
-# repo = 'nixprime/cpsm'
-# build = './install.sh'
+[[plugins]]
+repo = 'nixprime/cpsm'
+build = 'env PY3=ON ./install.sh'
 
 [[plugins]]
 repo = 'Shougo/vimproc.vim'
