@@ -5,6 +5,9 @@ repo = 'Shougo/dein.vim'
 repo = 'Shougo/unite.vim'
 
 [[plugins]]
+repo = 'Shougo/denite.nvim'
+
+[[plugins]]
 repo = 'Shougo/neomru.vim'
 
 [[plugins]]
@@ -52,12 +55,12 @@ on_ft = 'go'
 repo = 'cespare/vim-toml'
 on_ft = 'toml'
 
-[[plugins]]
-repo = 'kien/ctrlp.vim'
+# [[plugins]]
+# repo = 'kien/ctrlp.vim'
 
-[[plugins]]
-repo = 'nixprime/cpsm'
-build = './install.sh'
+# [[plugins]]
+# repo = 'nixprime/cpsm'
+# build = './install.sh'
 
 [[plugins]]
 repo = 'Shougo/vimproc.vim'

@@ -242,12 +242,11 @@ let mapleader = " "
 nnoremap <C-]> g<C-]>
 nnoremap <C-w>] <C-w>g]
 " Unite
-nnoremap <silent> <Leader>uf :<C-u>Unite file<CR>
-nnoremap <silent> <Leader>um :<C-u>Unite file_mru<CR>
+nnoremap <silent> <Leader>uf :<C-u>Denite file<CR>
+nnoremap <silent> <Leader>um :<C-u>Denite file_mru<CR>
 nnoremap <silent> <Leader>ut :<C-u>Unite tab<CR>
 " CtrlP
-nnoremap <silent> <Leader>pf :<C-u>CtrlP<CR>
-nnoremap <silent> <Leader>pm :<C-u>CtrlPMRUFiles<CR>
+nnoremap <silent> <Leader>pf :<C-u>Denite file_rec<CR>
 nnoremap <silent> <Leader>o  :<C-u>Unite -vertical -winwidth=50 -no-quit outline<CR>
 " Formatter
 nnoremap <silent> <Leader>- gg=Gg;
