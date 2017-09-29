@@ -262,6 +262,8 @@ imap <F1> <Esc>
 autocmd QuickFixCmdPost *grep* cwindow
 "
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
+" Ale toggle
+map <leader>at :ALEToggle<CR>
 
 " ----------------------------------------------------------------------------------------
 " core
