@@ -44,6 +44,18 @@ repo = 'w0rp/ale'
 repo = 'kien/rainbow_parentheses.vim'
 
 [[plugins]]
+repo = 'pangloss/vim-javascript'
+on_ft = 'javascript'
+
+[[plugins]]
+repo = 'othree/yajs.vim'
+on_ft = 'javascript'
+
+[[plugins]]
+repo = 'mxw/vim-jsx'
+on_ft = 'javascript'
+
+[[plugins]]
 repo = 'vim-jp/vim-go-extra'
 on_ft = 'go'
 
