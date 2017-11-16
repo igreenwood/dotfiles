@@ -1,10 +1,4 @@
 [[plugins]]
-repo = 'Shougo/denite.nvim'
-
-[[plugins]]
-repo = 'Shougo/neomru.vim'
-
-[[plugins]]
 repo = 'Shougo/deoplete.nvim'
 hook_add = 'let g:deoplete#enable_at_startup = 1'
 
@@ -30,12 +24,11 @@ repo = 'w0rp/ale'
 repo = 'kien/rainbow_parentheses.vim'
 
 [[plugins]]
-repo = 'Shougo/vimproc.vim'
-build = 'make'
-
-[[plugins]]
 repo = 'thinca/vim-zenspace'
 
 [[plugins]]
 repo = "lilydjwg/colorizer"
 on_ft = 'css'
+
+[[plugins]]
+repo = "Yggdroot/indentLine"
