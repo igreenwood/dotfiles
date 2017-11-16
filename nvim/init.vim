@@ -38,7 +38,7 @@ vnoremap <silent> <C-p> "0p<CR>
 map <F1> <Esc>
 imap <F1> <Esc>
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
-colorscheme spring-night
+colorscheme lucario
 set nu
 set list
 set listchars=tab:»-,trail:-,eol:$,extends:»,precedes:«,nbsp:%

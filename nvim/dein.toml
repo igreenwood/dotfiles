@@ -12,7 +12,7 @@ repo = 'tpope/vim-fugitive'
 repo = 'airblade/vim-gitgutter'
 
 [[plugins]]
-repo = 'vim-color-spring-night'
+repo = 'raphamorim/lucario'
 
 [[plugins]]
 repo = 'tpope/vim-surround'
