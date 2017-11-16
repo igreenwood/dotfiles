@@ -2,4 +2,7 @@
 .vim/undo/*
 .vim/dein/cache
 .vim/swap/*
+nvim/backup/*
+nvim/undo/*
+nvim/swap/*
 !.gitkeep
