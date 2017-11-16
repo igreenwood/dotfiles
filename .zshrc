@@ -1,3 +1,5 @@
+export XDG_CONFIG_HOME=~/.config
+
 fpath=(/usr/local/share/zsh-completions $fpath)
 autoload -U compinit
 compinit -u
