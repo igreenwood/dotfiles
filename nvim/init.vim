@@ -52,5 +52,6 @@ set backupdir=~/.config/nvim/backup
 set undodir=~/.config/nvim/undo
 set textwidth=0
 set autoread
+set ignorecase
 nnoremap ; :
 nnoremap : ;
