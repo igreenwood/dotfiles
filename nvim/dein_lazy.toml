@@ -10,8 +10,9 @@ repo = 'Shougo/denite.nvim'
 depends = 'neomru.vim'
 on_cmd = 'Denite'
 hook_post_source = '''
-call denite#custom#source('file_rec', 'matchers', ['matcher_fuzzy','matcher_ignore_globs'])
+call denite#custom#source('file_rec', 'matchers', ['matcher_ignore_globs'])
 call denite#custom#filter('matcher_ignore_globs', 'ignore_globs',
       \ [ '.git/', '.ropeproject/', '__pycache__/', 'node_modules/',
-      \   'venv/', 'images/', '*.min.*', 'img/', 'fonts/'])
+      \   'venv/', 'images/', '*.min.*', 'img/', 'fonts/', '*.jpg', '*.png', '*.ico',
+      \   '*.gif', '*.svg', '*.log', '*.map', 'coverage/'])
 '''
