@@ -29,9 +29,8 @@ endif
 let mapleader = " "
 nnoremap <silent> <Leader>uf :<C-u>Denite file<CR>
 nnoremap <silent> <Leader>um :<C-u>Denite file_mru<CR>
-nnoremap <silent> <Leader>ut :<C-u>Unite tab<CR>
+nnoremap <silent> <Leader>ub :<C-u>Denite buffer<CR>
 nnoremap <silent> <Leader>pf :<C-u>Denite file_rec<CR>
-nnoremap <silent> <Leader>o  :<C-u>Unite -vertical -winwidth=50 -no-quit outline<CR>
 nnoremap <silent> <Leader>- gg=Gg;
 nnoremap <silent> <Leader>tn :tabnew<CR>
 vnoremap <silent> <C-p> "0p<CR>
