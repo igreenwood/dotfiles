@@ -2,7 +2,20 @@
 repo = 'Shougo/deoplete.nvim'
 hook_add = '''
 let g:deoplete#enable_at_startup = 1
+
+  inoremap <silent><expr> <TAB>
+  \ pumvisible() ? "\<C-n>" :
+  \ <SID>check_back_space() ? "\<TAB>" :
+  \ deoplete#mappings#manual_complete()
+
+  function! s:check_back_space() abort "{{{
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~ '\s'
+  endfunction"}}}
 '''
+
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'
 
 [[plugins]]
 repo = 'itchyny/lightline.vim'
@@ -29,8 +42,20 @@ repo = 'kien/rainbow_parentheses.vim'
 repo = 'thinca/vim-zenspace'
 
 [[plugins]]
+repo = "Yggdroot/indentLine"
+
+[[plugins]]
 repo = "lilydjwg/colorizer"
 on_ft = 'css'
 
 [[plugins]]
-repo = "Yggdroot/indentLine"
+repo = 'cespare/vim-toml'
+on_ft = 'toml'
+
+[[plugins]]
+repo = 'elzr/vim-json'
+on_ft = 'json'
+
+[[plugins]]
+repo = 'rcmdnk/vim-markdown'
+on_ft = 'markdown'
