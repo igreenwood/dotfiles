@@ -27,6 +27,7 @@ if dein#check_install()
 endif
 
 let mapleader = " "
+filetype plugin indent on
 nnoremap <silent> <Leader>uf :<C-u>Denite file<CR>
 nnoremap <silent> <Leader>um :<C-u>Denite file_mru<CR>
 nnoremap <silent> <Leader>ub :<C-u>Denite buffer<CR>
