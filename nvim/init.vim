@@ -52,5 +52,6 @@ set undodir=~/.config/nvim/undo
 set textwidth=0
 set autoread
 set ignorecase
+set conceallevel=0
 nnoremap ; :
 nnoremap : ;

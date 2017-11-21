@@ -3,15 +3,15 @@ repo = 'Shougo/deoplete.nvim'
 hook_add = '''
 let g:deoplete#enable_at_startup = 1
 
-  inoremap <silent><expr> <TAB>
-  \ pumvisible() ? "\<C-n>" :
-  \ <SID>check_back_space() ? "\<TAB>" :
-  \ deoplete#mappings#manual_complete()
+inoremap <silent><expr> <TAB>
+\ pumvisible() ? "\<C-n>" :
+\ <SID>check_back_space() ? "\<TAB>" :
+\ deoplete#mappings#manual_complete()
 
-  function! s:check_back_space() abort "{{{
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~ '\s'
-  endfunction"}}}
+function! s:check_back_space() abort "{{{
+let col = col('.') - 1
+return !col || getline('.')[col - 1]  =~ '\s'
+endfunction"}}}
 '''
 
 [[plugins]]
@@ -42,23 +42,30 @@ repo = 'w0rp/ale'
 repo = 'kien/rainbow_parentheses.vim'
 
 [[plugins]]
+repo = 'nathanaelkane/vim-indent-guides'
+hook_add = '''
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=black
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=darkgrey
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_guide_size = 1
+let g:indent_guides_start_level = 2
+'''
+
+[[plugins]]
 repo = 'thinca/vim-zenspace'
 
 [[plugins]]
-repo = "Yggdroot/indentLine"
-
-[[plugins]]
 repo = "lilydjwg/colorizer"
-on_ft = 'css'
 
 [[plugins]]
 repo = 'cespare/vim-toml'
-on_ft = 'toml'
 
 [[plugins]]
 repo = 'elzr/vim-json'
-on_ft = 'json'
 
 [[plugins]]
 repo = 'rcmdnk/vim-markdown'
-on_ft = 'markdown'
+hook_add = '''
+let g:vim_markdown_better_folding=0
+let g:vim_markdown_folding_disabled = 1
+'''
