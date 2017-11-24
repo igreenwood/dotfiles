@@ -53,5 +53,6 @@ set textwidth=0
 set autoread
 set ignorecase
 set conceallevel=0
+let g:vim_json_syntax_conceal = 0
 nnoremap ; :
 nnoremap : ;
