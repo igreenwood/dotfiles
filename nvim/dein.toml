@@ -78,3 +78,10 @@ hook_add = '''
 let g:vim_markdown_better_folding=0
 let g:vim_markdown_folding_disabled = 1
 '''
+
+[[plugins]]
+repo = 'fatih/vim-hclfmt'
+hook_add = '''
+let g:hcl_fmt_autosave = 0
+let g:tf_fmt_autosave = 0
+'''

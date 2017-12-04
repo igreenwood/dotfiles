@@ -1,9 +1,0 @@
-set background=dark
-colorscheme monokai
-set guifont=Menlo\ for\ Powerline:h11
-"set guifontwide=Menlo\ for\ Powerline:h11
-set columns=200
-set lines=70
-set imdisable
-set visualbell t_vb=
-set ambiwidth=single
