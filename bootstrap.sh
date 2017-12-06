@@ -15,6 +15,7 @@ brew install python3
 brew install neovim
 brew install peco
 brew install envchain
+brew install tmux
 
 pip3 install neovim
 
