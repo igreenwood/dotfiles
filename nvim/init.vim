@@ -56,3 +56,4 @@ set conceallevel=0
 let g:vim_json_syntax_conceal = 0
 nnoremap ; :
 nnoremap : ;
+command! -nargs=1 -complete=file Rename f <args>|call delete(expand('#'))
