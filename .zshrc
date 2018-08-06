@@ -130,6 +130,9 @@ source /usr/local/bin/aws_zsh_completer.sh
 export PATH=$PATH:$HOME/.rbenv/bin
 eval "$(rbenv init -)"
 
+# nodebrew
+export PATH=$HOME/.nodebrew/current/bin:$PATH
+
 # ##### ##### ##### ##### #####
 # peco
 function peco-src () {
