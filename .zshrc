@@ -72,6 +72,10 @@ if type rmtrash > /dev/null 2>&1; then
   alias rm='rmtrash'
 fi
 
+if type bat > /dev/null 2>&1; then
+  alias cat='bat'
+fi
+
 # ##### ##### ##### ##### #####
 # Golang
 export GOPATH=$HOME/Develop/repositories

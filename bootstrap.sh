@@ -16,6 +16,7 @@ brew install neovim
 brew install peco
 brew install envchain
 brew install tmux
+brew install bat
 
 pip3 install neovim
 
