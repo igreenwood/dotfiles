@@ -78,8 +78,8 @@ fi
 
 # ##### ##### ##### ##### #####
 # Golang
-export GOPATH=$HOME/Develop/repositories
-export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
+# export GOPATH=$HOME/Develop/repositories
+export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin/ #:$GOPATH/bin
 
 # ##### ##### ##### ##### #####
 # Function
@@ -125,11 +125,6 @@ ls_abbrev() {
 eval `ssh-agent`
 ssh-add ~/.ssh/id_rsa
 
-# eval "$(docker-machine env dev)"
-
-# aws cli
-source /usr/local/bin/aws_zsh_completer.sh
-
 # rbenv
 export PATH=$PATH:$HOME/.rbenv/bin
 eval "$(rbenv init -)"
@@ -149,4 +144,3 @@ function peco-src () {
 }
 zle -N peco-src
 bindkey '^]' peco-src
-

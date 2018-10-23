@@ -6,4 +6,4 @@
 [core]
 	editor = vim
 [commit]
-	template = /Users/daisuketsuji/.git_commit_message
+	template = /Users/tsujidaisuke/.git_commit_message
