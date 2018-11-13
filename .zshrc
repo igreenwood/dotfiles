@@ -129,6 +129,9 @@ ssh-add ~/.ssh/id_rsa
 export PATH=$PATH:$HOME/.rbenv/bin
 eval "$(rbenv init -)"
 
+# ruby
+export RUBOCOP_OPTS='-D -E -S -P'
+
 # nodebrew
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 
