@@ -112,3 +112,6 @@ on_ft = ['ruby']
 
 [[plugins]]
 repo = 'editorconfig/editorconfig-vim'
+
+[[plugins]]
+repo = 'RRethy/vim-illuminate'

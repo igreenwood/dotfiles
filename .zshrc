@@ -130,7 +130,7 @@ export PATH=$PATH:$HOME/.rbenv/bin
 eval "$(rbenv init -)"
 
 # ruby
-export RUBOCOP_OPTS='-D -E -S -P'
+export RUBOCOP_OPTS='-D -E -S'
 
 # nodebrew
 export PATH=$HOME/.nodebrew/current/bin:$PATH
