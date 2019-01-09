@@ -148,3 +148,11 @@ function peco-src () {
 }
 zle -N peco-src
 bindkey '^]' peco-src
+
+# ##### ##### ##### ##### #####
+# transfer
+transfer() {
+    curl --progress-bar --upload-file "$1" https://transfer.sh/$(basename $1) | tee /dev/null;
+}
+
+alias transfer=transfer
