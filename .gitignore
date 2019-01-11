@@ -6,3 +6,5 @@ nvim/backup/*
 nvim/undo/*
 nvim/swap/*
 !.gitkeep
+kuma_release_note
+kuma_release_note.rb

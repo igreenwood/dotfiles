@@ -32,6 +32,7 @@ nnoremap <silent> <Leader>uf :<C-u>Denite file<CR>
 nnoremap <silent> <Leader>um :<C-u>Denite file_mru<CR>
 nnoremap <silent> <Leader>ub :<C-u>Denite buffer<CR>
 nnoremap <silent> <Leader>pf :<C-u>Denite file_rec<CR>
+nnoremap <silent> <Leader>gr :<C-u>Denite grep<CR>
 nnoremap <silent> <Leader>- gg=Gg;
 nnoremap <silent> <Leader>tn :tabnew<CR>
 vnoremap <silent> <C-p> "0p<CR>
