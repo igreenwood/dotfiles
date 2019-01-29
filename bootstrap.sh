@@ -22,6 +22,7 @@ brew install reattach-to-user-namespace
 pip3 install neovim
 
 ln -s $SCRIPT_DIR/.zshrc $HOME/.zshrc
+ln -s $SCRIPT_DIR/.zlogout $HOME/.zlogout
 ln -s $SCRIPT_DIR/.tmux.conf $HOME/.tmux.conf
 ln -s $SCRIPT_DIR/.hyper.js $HOME/.hyper.js
 ln -s $SCRIPT_DIR/.gitconfig $HOME/.gitconfig

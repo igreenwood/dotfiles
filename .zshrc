@@ -79,6 +79,19 @@ if type bat > /dev/null 2>&1; then
 fi
 
 # ##### ##### ##### ##### #####
+# ssh-agent
+# eval `ssh-agent`
+SSH_KEY_LIFE_TIME_SEC=3600
+
+SSH_AGENT_FILE=$HOME/.ssh-agent
+test -f $SSH_AGENT_FILE && source $SSH_AGENT_FILE > /dev/null 2>&1
+if [ $( ps -ef | grep ssh-agent | grep -v grep | wc -l ) -eq 0 ]; then
+    ssh-agent -t $SSH_KEY_LIFE_TIME_SEC > $SSH_AGENT_FILE
+    source $SSH_AGENT_FILE > /dev/null 2>&1
+fi
+ssh-add ~/.ssh/id_rsa
+
+# ##### ##### ##### ##### #####
 # Golang
 # export GOPATH=$HOME/Develop/repositories
 export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin/ #:$GOPATH/bin
@@ -123,9 +136,6 @@ ls_abbrev() {
     echo "$ls_result"
   fi
 }
-
-eval `ssh-agent`
-ssh-add ~/.ssh/id_rsa
 
 # rbenv
 export PATH=$PATH:$HOME/.rbenv/bin
