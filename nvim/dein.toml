@@ -43,6 +43,7 @@ let g:ale_linters = {
 \'erb': [],
 \'eruby': [],
 \'ruby': ['rubocop', 'ruby', 'brakeman'],
+\'scss': ['scsslint'],
 \}
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_enter = 0
@@ -109,9 +110,3 @@ repo = 'othree/html5.vim'
 [[plugins]]
 repo = 'tpope/vim-endwise'
 on_ft = ['ruby']
-
-[[plugins]]
-repo = 'editorconfig/editorconfig-vim'
-
-[[plugins]]
-repo = 'RRethy/vim-illuminate'
