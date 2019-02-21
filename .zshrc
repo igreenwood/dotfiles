@@ -67,6 +67,7 @@ alias du="du -h"
 alias df="df -h"
 # alias ag="pt"
 alias weather="curl http://wttr.in/"
+alias be="bundle exec"
 
 alias chrome="open -a /Applications/Google\ Chrome.app"
 
