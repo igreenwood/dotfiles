@@ -10,7 +10,7 @@ repo = 'Shougo/denite.nvim'
 depends = 'neomru.vim'
 on_cmd = 'Denite'
 hook_post_source = '''
-call denite#custom#var('file_rec', 'command', ['ag', '--follow', '--nocolor', '--nogroup', '--hidden', '-g', ''])
+call denite#custom#var('file_rec', 'command', ['ag', '--follow', '--nocolor', '--nogroup', '-g', ''])
 call denite#custom#var('grep', 'command', ['ag', '--follow', '--nocolor', '--smart-case', '--hidden'])
 call denite#custom#var('grep', 'default_opts', [])
 call denite#custom#var('grep', 'recursive_opts', [])
