@@ -1,0 +1,74 @@
+{
+    "vim.useSystemClipboard": true,
+    "vim.hlsearch": true,
+    // カーソル上にあるワードを"*"で検索
+    "vim.visualstar": true,
+    "vim.leader": "<space>",
+    "vim.ignorecase": true,
+    "vim.incsearch": true,
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "<leader>",
+                "t",
+                "n"
+            ],
+            "commands": [
+                ":tabnew"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "p",
+                "f"
+            ],
+            "commands": [
+                "workbench.action.quickOpen"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "="
+            ],
+            "commands": [
+                "editor.action.formatDocument"
+            ]
+        },
+        {
+            "before": [
+                ";"
+            ],
+            "after": [
+                ":"
+            ]
+        },
+        {
+            "before": [
+                ":"
+            ],
+            "after": [
+                ";"
+            ]
+        }
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                ";"
+            ],
+            "after": [
+                ":"
+            ]
+        },
+        {
+            "before": [
+                ":"
+            ],
+            "after": [
+                ";"
+            ]
+        }
+    ],
+}

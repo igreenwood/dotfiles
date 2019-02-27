@@ -30,3 +30,5 @@ ln -s $SCRIPT_DIR/.git_commit_message $HOME/.git_commit_message
 git config --global commit.template $HOME/.git_commit_message
 ln -s $SCRIPT_DIR/nvim $HOME/.config/nvim
 ln -s $SCRIPT_DIR/bin $HOME/bin
+ln -s $SCRIPT_DIR/vscode/keybindings.json /Users/tsujidaisuke/Library/Application\ Support/Code/User/
+ln -s $SCRIPT_DIR/vscode/settings.json /Users/tsujidaisuke/Library/Application\ Support/Code/User/
