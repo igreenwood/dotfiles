@@ -3,10 +3,12 @@
 [user]
 	name = Daisuke Tsuji
 	email = dim0627@gmail.com
+	signingkey = A685BC732EDCE610
 [core]
 	editor = vim
 [commit]
 	template = /Users/tsujidaisuke/.git_commit_message
+	gpgsign = true
 [filter "lfs"]
 	process = git-lfs filter-process
 	required = true

@@ -14,8 +14,8 @@ zstyle ':vcs_info:git:*' unstagedstr "%F{red}*"
 zstyle ':vcs_info:*' formats "%F{green}(%c%u%b%f%F{green})%f "
 zstyle ':vcs_info:*' actionformats '[%b|%a]'
 precmd () { vcs_info }
-PROMPT='%F{red}%~%f ${vcs_info_msg_0_}%F{blue}$%f '
-PROMPT2='%F{red}%_%f %F{blue}~%f '
+PROMPT='[%D %T] %F{red}%~%f ${vcs_info_msg_0_}%F{blue}$%f '
+PROMPT2='[%D] %F{red}%_%f %F{blue}~%f '
 SPROMPT='%F{red}%r is correct? [n,y,a,e]:%f %F{blue}$%f '
 [ -n '${REMOTEHOST}${SSH_CONNECTION}' ] &&
 
@@ -137,6 +137,9 @@ ls_abbrev() {
     echo "$ls_result"
   fi
 }
+
+# nodenv
+eval "$(nodenv init -)"
 
 # rbenv
 export PATH=$PATH:$HOME/.rbenv/bin
