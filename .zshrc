@@ -176,6 +176,3 @@ alias transfer=transfer
 # mysqlenv
 source ~/.mysqlenv/etc/bashrc
 
-# ##### ##### ##### ##### #####
-# flutter
-export PATH="$PATH:/Users/tsujidaisuke/Develop/repositories/src/github.com/flutter/flutter/bin"
