@@ -59,12 +59,9 @@ export PATH=$PATH:~/bin
 setopt complete_aliases
 # alias vim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim -g "$@"'
 alias vim='nvim'
-alias ls='ls -vFG'
+alias ls='exa'
 alias l='ls -la'
-alias la="ls -a"
 alias ll="ls -l"
-alias du="du -h"
-alias df="df -h"
 # alias ag="pt"
 alias weather="curl http://wttr.in/"
 alias be="bundle exec"

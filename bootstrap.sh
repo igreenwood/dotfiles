@@ -18,6 +18,7 @@ brew install envchain
 brew install tmux
 brew install bat
 brew install fd
+brew install exa
 brew install reattach-to-user-namespace
 
 pip3 install neovim
