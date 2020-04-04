@@ -172,5 +172,5 @@ alias transfer=transfer
 
 # ##### ##### ##### ##### #####
 # mysqlenv
-source ~/.mysqlenv/etc/bashrc
+# source ~/.mysqlenv/etc/bashrc
 

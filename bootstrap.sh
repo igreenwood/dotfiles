@@ -19,13 +19,17 @@ brew install tmux
 brew install bat
 brew install fd
 brew install reattach-to-user-namespace
+brew install ghq
+brew install gpg
+brew install mysql
+brew install postgresql
 
 pip3 install neovim
 
 ln -s $SCRIPT_DIR/.zshrc $HOME/.zshrc
 ln -s $SCRIPT_DIR/.zlogout $HOME/.zlogout
 ln -s $SCRIPT_DIR/.tmux.conf $HOME/.tmux.conf
-ln -s $SCRIPT_DIR/.hyper.js $HOME/.hyper.js
+ln -snf $SCRIPT_DIR/.hyper.js $HOME/.hyper.js
 ln -s $SCRIPT_DIR/.gitconfig $HOME/.gitconfig
 ln -s $SCRIPT_DIR/.git_commit_message $HOME/.git_commit_message
 git config --global commit.template $HOME/.git_commit_message

@@ -3,7 +3,7 @@
 [user]
 	name = Daisuke Tsuji
 	email = dim0627@gmail.com
-	signingkey = A685BC732EDCE610
+	signingkey = F353FFE48FCA5388
 [core]
 	editor = vim
 [commit]
