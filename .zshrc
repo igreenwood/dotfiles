@@ -66,6 +66,7 @@ alias ll="ls -l"
 alias weather="curl http://wttr.in/"
 alias be="bundle exec"
 alias by="bundle && yarn"
+alias ag='ag --path-to-ignore ~/.ignore'
 
 alias chrome="open -a /Applications/Google\ Chrome.app"
 
