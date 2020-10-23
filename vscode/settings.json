@@ -6,6 +6,9 @@
     "editor.renderWhitespace": "boundary",
     "editor.renderControlCharacters": true,
     "editor.renderLineHighlight": "all",
+    "editor.codeActionsOnSave": {
+        "source.fixAll": true
+    },
     "html.format.indentInnerHtml": true,
     "window.title": "${dirty}${activeEditorMedium}${separator}${rootName}",
     "files.insertFinalNewline": true,
@@ -111,4 +114,7 @@
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "diffEditor.ignoreTrimWhitespace": false,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "extensions.ignoreRecommendations": false,
 }
